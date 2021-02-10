@@ -9,8 +9,11 @@ public class Tauler {
 
     }
     public void inicialitzarPartida(String paraula, int num){
-
+        paraulaSecreta = paraula.toCharArray();
+        paraulaEndevinada = new String[getParaulaSecreta().length];
+        intents = num;
     }
+
     public char[] getParaulaSecreta(){
         return paraulaSecreta;
     }
@@ -18,14 +21,22 @@ public class Tauler {
         return intents;
     }
     public String verificar(String lletra){
-        for (int i = 0; i < paraulaSecreta.length(); i++){
 
-        }
         if(lletra.length() != 1){
             return "Lletra incorrecte";
         }
         else {
-            return "Lletra correcte";
+            boolean trobada = false;
+            for (int i = 0; i < paraulaSecreta.length; i++){
+                if (paraulaSecreta[i] == lletra.charAt(0)) {
+                    paraulaEndevinada[i] = lletra;
+                    trobada = true;
+                }
+            }
+            if (!trobada) {
+                intents--;
+            }
+            //Falta pasar paraulaEndevinada a String y hacer return
         }
 
 
