@@ -58,6 +58,7 @@ public class Tauler {
         return paraulaEndevinada;
     }
 
+<<<<<<< Updated upstream
     public String imprimirVides(){
         if (intents == 1){
             return imprimirVidesSingular();
@@ -73,5 +74,9 @@ public class Tauler {
 
     private String imprimirVidesPlural() {
         return ("Et queden " + String.valueOf(intents) + " de " + String.valueOf(intentsInicials));
+=======
+
+    public String imprimir() {
+>>>>>>> Stashed changes
     }
 }
