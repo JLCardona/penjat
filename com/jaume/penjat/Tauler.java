@@ -42,7 +42,7 @@ public class Tauler {
                     aux = aux + paraulaEndevinada[i];
                 }
                 else {
-                    aux = aux + "_";
+                    aux =aux + "_";
                 }
             }
             return aux;
