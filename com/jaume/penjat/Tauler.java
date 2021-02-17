@@ -13,7 +13,7 @@ public class Tauler {
         paraulaSecreta = paraula.toCharArray();
         paraulaEndevinada = new String[getParaulaSecreta().length];
         for (int i = 0;i<paraulaEndevinada.length;i++) {
-            paraulaEndevinada[i] = "_";
+            paraulaEndevinada[i] = null ;
         }
         intents = num;
         intentsInicials = num;
@@ -22,7 +22,12 @@ public class Tauler {
     public String imprimir() {
         String aux = "";
         for (int i = 0;i<paraulaEndevinada.length;i++) {
-            aux = aux + paraulaEndevinada[i];
+            if (paraulaEndevinada[i] == null){
+                aux = aux + "_";
+            }
+            else{
+                aux = aux + paraulaEndevinada[i];
+            }
         }
         return aux;
     }
@@ -58,7 +63,6 @@ public class Tauler {
         return paraulaEndevinada;
     }
 
-<<<<<<< Updated upstream
     public String imprimirVides(){
         if (intents == 1){
             return imprimirVidesSingular();
@@ -73,11 +77,7 @@ public class Tauler {
     }
 
     private String imprimirVidesPlural() {
-        return ("Et queden " + String.valueOf(intents) + " de " + String.valueOf(intentsInicials));
-=======
-
-    public String imprimir() {
->>>>>>> Stashed changes
+        return ("Et queden " + String.valueOf(intents) + " vides de " + String.valueOf(intentsInicials));
     }
 
     public boolean hasGuanyat() {
