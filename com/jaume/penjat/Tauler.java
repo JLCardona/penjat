@@ -1,9 +1,9 @@
 package com.jaume.penjat;
 
 public class Tauler {
-    char[] paraulaSecreta;
-    int intents;
-    String[] paraulaEndevinada;
+    private char[] paraulaSecreta;
+    private int intents;
+    private String[] paraulaEndevinada;
 
     public Tauler(){
 
