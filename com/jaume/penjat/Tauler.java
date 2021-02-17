@@ -36,7 +36,16 @@ public class Tauler {
             if (!trobada) {
                 intents--;
             }
-            //Falta pasar paraulaEndevinada a String y hacer return
+            String aux = "";
+            for (int i = 0;i>paraulaEndevinada.length;i++) {
+                if (paraulaEndevinada[i] != null) {
+                    aux = aux + paraulaEndevinada[i];
+                }
+                else {
+                    aux = aux + "_";
+                }
+            }
+            return aux;
         }
 
 
