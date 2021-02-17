@@ -58,8 +58,8 @@ public class Tauler {
         return paraulaEndevinada;
     }
 
-    public String imprimirVides{
-        if intents == 1{
+    public String imprimirVides(){
+        if (intents == 1){
             return imprimirVidesSingular();
         }
         else {
