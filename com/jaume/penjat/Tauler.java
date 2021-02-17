@@ -4,6 +4,7 @@ public class Tauler {
     private char[] paraulaSecreta;
     private int intents;
     private String[] paraulaEndevinada;
+    private int intentsInicials;
 
     public Tauler(){
 
@@ -15,6 +16,7 @@ public class Tauler {
             paraulaEndevinada[i] = "_";
         }
         intents = num;
+        intentsInicials = num;
     }
 
     public String imprimir() {
@@ -54,5 +56,22 @@ public class Tauler {
     }
     public String[] getPalabraEndevinada(){
         return paraulaEndevinada;
+    }
+
+    public String imprimirVides{
+        if intents == 1{
+            return imprimirVidesSingular();
+        }
+        else {
+            return imprimirVidesPlural();
+        }
+    }
+
+    private String imprimirVidesSingular(){
+        return ("Et queda 1 vida de " + String.valueOf(intentsInicials));
+    }
+
+    private String imprimirVidesPlural() {
+        return ("Et queden " + String.valueOf(intents) + " de " + String.valueOf(intentsInicials));
     }
 }
