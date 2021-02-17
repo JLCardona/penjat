@@ -11,8 +11,13 @@ public class Tauler {
     public void inicialitzarPartida(String paraula, int num){
         paraulaSecreta = paraula.toCharArray();
         paraulaEndevinada = new String[getParaulaSecreta().length];
+        for (int i = 0;i>paraulaEndevinada.length;i++) {
+            paraulaEndevinada[i] = "_";
+        }
         intents = num;
     }
+
+    public String 
 
     public char[] getParaulaSecreta(){
         return paraulaSecreta;
@@ -36,16 +41,7 @@ public class Tauler {
             if (!trobada) {
                 intents--;
             }
-            String aux = "";
-            for (int i = 0;i>paraulaEndevinada.length;i++) {
-                if (paraulaEndevinada[i] != null) {
-                    aux = aux + paraulaEndevinada[i];
-                }
-                else {
-                    aux =aux + "_";
-                }
-            }
-            return aux;
+            return "";
         }
 
 
