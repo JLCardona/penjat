@@ -17,7 +17,13 @@ public class Tauler {
         intents = num;
     }
 
-    public String 
+    public String imprimir() {
+        String aux = "";
+        for (int i = 0;i>paraulaEndevinada.length;i++) {
+            aux = aux + paraulaEndevinada[i];
+        }
+        return aux;
+    }
 
     public char[] getParaulaSecreta(){
         return paraulaSecreta;
