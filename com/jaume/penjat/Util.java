@@ -11,7 +11,11 @@ import java.util.logging.Logger;
 
 public class Util {
 
-
+    /**
+     * Ficam una cadena de caracters (string).
+     * @param enunciat Cadena de caracters (string).
+     * @return Valor.
+     */
     public static String makeQuestion(String enunciat){
         String valor = " ";
         try {
@@ -25,6 +29,11 @@ public class Util {
         return valor;
         }
 
+    /**
+     * Ficam un boolea.
+     * @param cadena Cadena de caracters (string).
+     * @return Booela (true or false).
+     */
     public static boolean isNumeric(String cadena){
         try {
             Integer.parseInt(cadena);

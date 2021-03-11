@@ -15,14 +15,27 @@ public class Puntuacio {
     private final String[] paraules3 = {"escombraries","escopinyes","engronxador","desnonament","malhauradament","malbaratament",};
     private final String[] letresBonus = {"x", "h", "y"};
 
+    /**
+     * Agafam els intents.
+     * @return Intents.
+     */
     public int getIntents() {
         return intents;
     }
 
+    /**
+     * Agafam el temps.
+     * @return Temps.
+     */
     public float getTemps() {
         return temps;
     }
 
+    /**
+     * El jugador escull la dificultat per a la seva partida i se genera la paraula secreta.
+     * @param dificultat Nivell de dificultat de la partida.
+     * @return Paraula secreta.
+     */
     public String getParaulaSecretaDificultat(int dificultat){
         paraula = "err";
         this.dificultat = dificultat;
@@ -43,6 +56,12 @@ public class Puntuacio {
         return paraula;
     }
 
+    /**
+     * Calculam la puntuació de la partida per al jugador.
+     * @param palabraEdivinada Paraula a endevinar.
+     * @param vides Intents.
+     * @return Puntuació.
+     */
     public float calcularPuntuacio(String[] palabraEdivinada, int vides){
         float puntuacio = 0;
         float percentatge = 0f;
@@ -86,6 +105,12 @@ public class Puntuacio {
         return puntuacio;
     }
 
+    /**
+     * Array (llista) amb els strings (cadena de caràcters).
+     * @param inputStr String a ficar.
+     * @param items Objectes.
+     * @return Llista amb els objectes (items).
+     */
     private boolean stringContainsItemFromList(String inputStr, String[] items) {
         return Arrays.stream(items).anyMatch(inputStr::contains);
     }
